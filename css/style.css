@@ -1,0 +1,74 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  transform-style: preserve-3d;
+  perspective: 500px;
+  background-color: rgb(56, 54, 54);
+}
+.content{
+  transform-style: preserve-3d;
+  position:absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: 500px;
+  /* border: 1px solid   #000; */
+  border-radius: 5px;
+}
+.content:hover{
+  transform:translate(-50%, -50%) rotateX(180deg);
+  transition: all 1s  ease; 
+  outline: 3px solid rgb(231, 252, 100);
+}
+
+.item{
+  top: 0%;
+  left: 0%;
+  position: absolute;
+  width: 350px;
+  height: 500px;
+  transform: rotateX(0deg);
+  transition: all 1s  ease;
+  border-radius: 5px; 
+}
+
+.front{
+  backface-visibility: hidden;
+  background-image: url(../images/pexels-balamurugan-anbazhagan-763103.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.back{
+  background-image: url(../images/pexels-joão-jesus-925743.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  backface-visibility: hidden;  
+  transform: rotateX(180deg);
+  text-align: center;
+  line-height: 500px;
+  color: #000;
+  font-weight: bold;
+}
+.logos{
+  left: 20%;
+  bottom: 30%;
+  position: absolute;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-around;
+}
+.logos a{
+  margin-right: 30px;
+}
+
+
